@@ -1,5 +1,6 @@
 
-![logo](https://cloud.githubusercontent.com/assets/5186464/16540124/efc51f72-408b-11e6-934a-4e750b8b55bb.png)
+
+![logo](https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/ScreenShots/FSCalendar-Persian.png)
 <br/><br/>
 [![Apps Using](https://img.shields.io/badge/Apps%20Using-%3E%2010,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/FSCalendar)
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-%3E%20500,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/FSCalendar)
@@ -52,7 +53,8 @@
 
 ## Achievement of Users <a id="achievement"></a>
 
-|  ![1](https://cloud.githubusercontent.com/assets/5186464/21747193/3111e4ee-d59a-11e6-8e4d-ca695b53e421.png)    |  ![2](https://cloud.githubusercontent.com/assets/5186464/21747393/42a753fa-d5a0-11e6-9cb2-de7cc642e69e.png)  |  ![3](https://cloud.githubusercontent.com/assets/5186464/21897255/ff78fcdc-d923-11e6-9d59-62119bc4343f.png)  |  ![4](https://cloud.githubusercontent.com/assets/5186464/21747192/3111cacc-d59a-11e6-8626-44cd75ebd794.png)  |
+|  ![1](https://cloud.githubusercontent.com/assets/5186464/21747193/3111e4ee-d59a-11e6-8e4d-ca695b53e421.png)    |  ![2](https://cloud.githubusercontent.com/assets/5186464/21747393/42a753fa-d5a0-11e6-9cb2-de7cc642e69e.png)  |  ![3](https://cloud.githubusercontent.com/assets/5186464/21897255/ff78fcdc-d923-11e6-9d59-62119bc4343f.png)  |  ![4](https://cloud.githubusercontent.com/assets/5186464/21747192/3111cacc-d59a-11e6-8626-44cd75ebd794.png)  
+|
 | ------------- | ------------- | ------------- | ------------- |
 
 #### [***More Achievements***](https://github.com/WenchaoD/FSCalendar/wiki/) are available in [***FSCalendar Gallery***](https://github.com/WenchaoD/FSCalendar/wiki/)  
@@ -84,7 +86,7 @@ end
 * For iOS8+
 
 ```ruby
-github "WenchaoD/FSCalendar"
+github "hussein_hj/FSCalendar"
 ```
 
 ## Manually:
@@ -311,16 +313,13 @@ BOOL inSameUnit = [self.gregorian isDate:date1 equalToDate:date2 toUnitGranulari
 
 
 ## <a id='contact'/></a> Contact
-* 微博： [**@WenchaoD**](http://weibo.com/WenchaoD)
-* Twitter：[**@WenchaoD**](https://twitter.com/WenchaoD)
-* <a id='qq_group'/></a>QQ支持群: <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![fscalendar](https://cloud.githubusercontent.com/assets/5186464/18407011/8e4b6e48-7738-11e6-9fad-0e23cc881516.JPG)
+* Telegram： [**@Hussein_hj**](http://weibo.com/Hussein_hj)
+* Twitter：[**@Hussein_Juybari**](https://twitter.com/hussein_juybari)
 
-> If your made a beautiful calendar with this library in your app, please take a screen shot and [@me](https://twitter.com/WenchaoD) in twitter. Your help really means a lot to me! <br/>
+> If your made a beautiful calendar with this library in your app, please take a screen shot and [@me](https://twitter.com/hussein_juybari) in twitter. Your help really means a lot to me! <br/>
 
 
 # License
 FSCalendar is available under the MIT license. See the LICENSE file for more info.
 
-### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | [简书](http://www.jianshu.com/notebooks/4276521/latest)
+### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | 
