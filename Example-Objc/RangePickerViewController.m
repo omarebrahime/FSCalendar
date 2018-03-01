@@ -46,6 +46,11 @@
     self.view = view;
     
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), view.frame.size.width, view.frame.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+    
+    calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    calendar.identifier = NSCalendarIdentifierPersian;
+    calendar.firstWeekday = 7;
+    
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.pagingEnabled = NO;
@@ -71,7 +76,7 @@
 {
     [super viewDidLoad];
     
-    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierPersian];
     self.dateFormatter = [[NSDateFormatter alloc] init];
     self.dateFormatter.dateFormat = @"yyyy-MM-dd";
     
@@ -91,20 +96,12 @@
 
 - (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.dateFormatter dateFromString:@"2016-07-08"];
+    return [self.dateFormatter dateFromString:@"2000-07-08"];
 }
 
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:10 toDate:[NSDate date] options:0];
-}
-
-- (NSString *)calendar:(FSCalendar *)calendar titleForDate:(NSDate *)date
-{
-    if ([self.gregorian isDateInToday:date]) {
-        return @"今";
-    }
-    return nil;
+    return [self.dateFormatter dateFromString:@"2020-07-08"];
 }
 
 - (FSCalendarCell *)calendar:(FSCalendar *)calendar cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
