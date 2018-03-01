@@ -42,6 +42,11 @@
     
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0,  CGRectGetMaxY(self.navigationController.navigationBar.frame), view.frame.size.width, height)];
+    
+    calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    calendar.identifier = NSCalendarIdentifierPersian;
+    calendar.firstWeekday = 7;
+    
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.swipeToChooseGesture.enabled = YES;
