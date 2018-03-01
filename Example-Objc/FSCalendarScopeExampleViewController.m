@@ -52,6 +52,10 @@ NS_ASSUME_NONNULL_END
     
     [self.calendar selectDate:[NSDate date] scrollToDate:YES];
     
+    _calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    _calendar.identifier = NSCalendarIdentifierPersian;
+    _calendar.firstWeekday = 7;
+    
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
     panGesture.delegate = self;
     panGesture.minimumNumberOfTouches = 1;
@@ -68,7 +72,7 @@ NS_ASSUME_NONNULL_END
     
     // For UITest
     self.calendar.accessibilityIdentifier = @"calendar";
-    
+    _calendar.firstWeekday = 7;
 }
 
 - (void)dealloc
@@ -106,6 +110,19 @@ NS_ASSUME_NONNULL_END
         }
     }
     return shouldBegin;
+}
+
+#pragma mark - <FSCalendarDataSource>
+
+
+- (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
+{
+    return [self.dateFormatter dateFromString:@"2000/10/01"];
+}
+
+- (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
+{
+    return [self.dateFormatter dateFromString:@"2300/10/29"];
 }
 
 #pragma mark - <FSCalendarDelegate>
