@@ -1,5 +1,6 @@
 
-![logo](https://cloud.githubusercontent.com/assets/5186464/16540124/efc51f72-408b-11e6-934a-4e750b8b55bb.png)
+
+![logo](https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/ScreenShots/FSCalendar-Persian.png)
 <br/><br/>
 [![Apps Using](https://img.shields.io/badge/Apps%20Using-%3E%2010,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/FSCalendar)
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-%3E%20500,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/FSCalendar)
@@ -26,13 +27,22 @@
 ### iPad
 ![fscalendar-ipad](https://cloud.githubusercontent.com/assets/5186464/10927681/d2448cb6-82dc-11e5-9d11-f664a06698a7.jpg)
 
+### Persian Calendar 
+
+| ![Week](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.32.47.png) | ![Month](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.33.06.png) | ![DIY](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2016.46.44.png) | ![Range selection](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.26.50.png) |
+| ---------------------------------------- | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| ![Range](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.04.12.png) | ![Week range](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.27.00.png) |                                          |                                          |
+
+
+
 ### Safe Orientation
+
 ![fscalendar-scope-orientation-autolayout](https://cloud.githubusercontent.com/assets/5186464/20325758/ea125e1e-abc0-11e6-9e29-491acbcb0d07.gif)
 
 ### Today Extension
-|    iOS8/9    |    iOS10    |
-|--------------|-------------|
-|![today1](https://cloud.githubusercontent.com/assets/5186464/20288375/ed3fba0e-ab0d-11e6-8b15-43d3dc656f22.gif)|![today2](https://cloud.githubusercontent.com/assets/5186464/20288378/f11e318c-ab0d-11e6-8d1d-9d89b563e9d7.gif)|
+| iOS8/9                                   | iOS10                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| ![today1](https://cloud.githubusercontent.com/assets/5186464/20288375/ed3fba0e-ab0d-11e6-8b15-43d3dc656f22.gif) | ![today2](https://cloud.githubusercontent.com/assets/5186464/20288378/f11e318c-ab0d-11e6-8d1d-9d89b563e9d7.gif) |
 
 ### Interactive Scope Gesture
 | ![1](https://cloud.githubusercontent.com/assets/5186464/21559640/e92a9ccc-ce8a-11e6-8c60-e52204f33249.gif) |
@@ -46,13 +56,14 @@
 
 ### Swipe-To-Choose
 
-|Single-Selection<br/>Swipe-To-Choose|Multiple-Selection<br/>Swipe-To-Choose|DIY<br/>Swipe-To-Choose|
-|----------|--------|--------|
-|![1](https://cloud.githubusercontent.com/assets/5186464/20257768/cb1905d4-aa86-11e6-9ef7-af76f9caa024.gif)|![2](https://cloud.githubusercontent.com/assets/5186464/20257826/254070ec-aa87-11e6-81b1-1815453fd464.gif)|![3](https://cloud.githubusercontent.com/assets/5186464/20257836/2ffa3252-aa87-11e6-8ff9-3b40f5b2307b.gif)|
+| Single-Selection<br/>Swipe-To-Choose     | Multiple-Selection<br/>Swipe-To-Choose   | DIY<br/>Swipe-To-Choose                  |
+| ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| ![1](https://cloud.githubusercontent.com/assets/5186464/20257768/cb1905d4-aa86-11e6-9ef7-af76f9caa024.gif) | ![2](https://cloud.githubusercontent.com/assets/5186464/20257826/254070ec-aa87-11e6-81b1-1815453fd464.gif) | ![3](https://cloud.githubusercontent.com/assets/5186464/20257836/2ffa3252-aa87-11e6-8ff9-3b40f5b2307b.gif) |
 
 ## Achievement of Users <a id="achievement"></a>
 
-|  ![1](https://cloud.githubusercontent.com/assets/5186464/21747193/3111e4ee-d59a-11e6-8e4d-ca695b53e421.png)    |  ![2](https://cloud.githubusercontent.com/assets/5186464/21747393/42a753fa-d5a0-11e6-9cb2-de7cc642e69e.png)  |  ![3](https://cloud.githubusercontent.com/assets/5186464/21897255/ff78fcdc-d923-11e6-9d59-62119bc4343f.png)  |  ![4](https://cloud.githubusercontent.com/assets/5186464/21747192/3111cacc-d59a-11e6-8626-44cd75ebd794.png)  |
+|  ![1](https://cloud.githubusercontent.com/assets/5186464/21747193/3111e4ee-d59a-11e6-8e4d-ca695b53e421.png)    |  ![2](https://cloud.githubusercontent.com/assets/5186464/21747393/42a753fa-d5a0-11e6-9cb2-de7cc642e69e.png)  |  ![3](https://cloud.githubusercontent.com/assets/5186464/21897255/ff78fcdc-d923-11e6-9d59-62119bc4343f.png)  |  ![4](https://cloud.githubusercontent.com/assets/5186464/21747192/3111cacc-d59a-11e6-8626-44cd75ebd794.png)  
+|
 | ------------- | ------------- | ------------- | ------------- |
 
 #### [***More Achievements***](https://github.com/WenchaoD/FSCalendar/wiki/) are available in [***FSCalendar Gallery***](https://github.com/WenchaoD/FSCalendar/wiki/)  
@@ -84,7 +95,7 @@ end
 * For iOS8+
 
 ```ruby
-github "WenchaoD/FSCalendar"
+github "hussein_hj/FSCalendar"
 ```
 
 ## Manually:
@@ -297,30 +308,14 @@ BOOL inSameUnit = [self.gregorian isDate:date1 equalToDate:date2 toUnitGranulari
 
 ```
 
-
-## <a id="support"></a>Support this repo
-* [**★Star**](#) this repo 
-<br/>
-* Support with &nbsp; <a href="https://www.paypal.me/WenchaoD" target="_blank"><img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.svg" width="100" height="40" style="margin-bottom:-15px;"></a>
-<br/>
-* Support with <a href="https://cloud.githubusercontent.com/assets/5186464/15096775/bacc0506-1539-11e6-91b7-b1a7a773622b.png" target="_blank"><img src="http://a1.mzstatic.com/us/r30/Purple49/v4/50/16/b3/5016b341-39c1-b47b-2994-d7e23823baed/icon175x175.png" width="40" height="40" style="margin-bottom:-15px;-webkit-border-radius:10px;border:1px solid rgba(30, 154, 236, 1);"></a> or
-<a href="https://cloud.githubusercontent.com/assets/5186464/15096872/b06f3a3a-153c-11e6-89f9-2e9c7b88ef42.png" target="_blank"><img src="http://a4.mzstatic.com/us/r30/Purple49/v4/23/31/14/233114f8-2e8d-7b63-8dc5-85d29893061e/icon175x175.jpeg" height="40" width="40" style="margin-bottom:-15px; -webkit-border-radius: 10px;border:1px solid rgba(43, 177, 0, 1)"></a>
-
-
-<br/>
-
-
 ## <a id='contact'/></a> Contact
-* 微博： [**@WenchaoD**](http://weibo.com/WenchaoD)
-* Twitter：[**@WenchaoD**](https://twitter.com/WenchaoD)
-* <a id='qq_group'/></a>QQ支持群: <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![fscalendar](https://cloud.githubusercontent.com/assets/5186464/18407011/8e4b6e48-7738-11e6-9fad-0e23cc881516.JPG)
+* Telegram： [**@Hussein_hj**](http://weibo.com/Hussein_hj)
+* Twitter：[**@Hussein_Juybari**](https://twitter.com/hussein_juybari)
 
-> If your made a beautiful calendar with this library in your app, please take a screen shot and [@me](https://twitter.com/WenchaoD) in twitter. Your help really means a lot to me! <br/>
+> If your made a beautiful calendar with this library in your app, please take a screen shot and [@me](https://twitter.com/hussein_juybari) in twitter. Your help really means a lot to me! <br/>
 
 
 # License
 FSCalendar is available under the MIT license. See the LICENSE file for more info.
 
-### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | [简书](http://www.jianshu.com/notebooks/4276521/latest)
+### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | 
