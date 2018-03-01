@@ -21,12 +21,6 @@
 
 ## <a id="screenshots"></a>Screenshots 
 
-### iPhone
-![fscalendar](https://cloud.githubusercontent.com/assets/5186464/10262249/4fabae40-69f2-11e5-97ab-afbacd0a3da2.jpg)
-
-### iPad
-![fscalendar-ipad](https://cloud.githubusercontent.com/assets/5186464/10927681/d2448cb6-82dc-11e5-9d11-f664a06698a7.jpg)
-
 ### Persian Calendar 
 
 | ![Week](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.32.47.png) | ![Month](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.33.06.png) | ![DIY](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2016.46.44.png) | ![Range selection](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.26.50.png) |
@@ -34,6 +28,11 @@
 | ![Range](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.04.12.png) | ![Week range](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.27.00.png) |                                          |                                          |
 
 
+### iPhone
+![fscalendar](https://cloud.githubusercontent.com/assets/5186464/10262249/4fabae40-69f2-11e5-97ab-afbacd0a3da2.jpg)
+
+### iPad
+![fscalendar-ipad](https://cloud.githubusercontent.com/assets/5186464/10927681/d2448cb6-82dc-11e5-9d11-f664a06698a7.jpg)
 
 ### Safe Orientation
 
