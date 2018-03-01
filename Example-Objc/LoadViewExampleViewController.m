@@ -59,7 +59,6 @@ NS_ASSUME_NONNULL_END
     
     [view addSubview:calendar];
     self.calendar = calendar;
-    [calendar setTransform:CGAffineTransformMakeScale(-1, 1)];
 }
 
 - (void)viewDidLoad
