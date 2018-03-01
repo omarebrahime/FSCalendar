@@ -308,7 +308,7 @@ BOOL inSameUnit = [self.gregorian isDate:date1 equalToDate:date2 toUnitGranulari
 ```
 
 ## <a id='contact'/></a> Contact
-* Telegram： [**@Hussein_hj**](http://weibo.com/Hussein_hj)
+* Telegram： [**@Hussein_hj**](https://t.me/Hussein_hj)
 * Twitter：[**@Hussein_Juybari**](https://twitter.com/hussein_juybari)
 
 > If your made a beautiful calendar with this library in your app, please take a screen shot and [@me](https://twitter.com/hussein_juybari) in twitter. Your help really means a lot to me! <br/>
