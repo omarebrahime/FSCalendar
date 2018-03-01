@@ -48,14 +48,18 @@ NS_ASSUME_NONNULL_END
     // 450 for iPad and 300 for iPhone
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), view.frame.size.width, height)];
+    calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    calendar.identifier = NSCalendarIdentifierPersian;
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.scrollDirection = FSCalendarScrollDirectionVertical;
     calendar.backgroundColor = [UIColor whiteColor];
+    calendar.firstWeekday = 7;
+    
     
     [view addSubview:calendar];
     self.calendar = calendar;
-    
+    [calendar setTransform:CGAffineTransformMakeScale(-1, 1)];
 }
 
 - (void)viewDidLoad
@@ -115,14 +119,13 @@ NS_ASSUME_NONNULL_END
 
 - (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.dateFormatter dateFromString:@"2016/10/01"];
+    return [self.dateFormatter dateFromString:@"2000/10/01"];
 }
 
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.dateFormatter dateFromString:@"2017/10/10"];
+    return [self.dateFormatter dateFromString:@"2300/10/29"];
 }
-
 
 - (UIImage *)calendar:(FSCalendar *)calendar imageForDate:(NSDate *)date
 {
