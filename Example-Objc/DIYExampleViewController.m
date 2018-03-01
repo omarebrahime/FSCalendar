@@ -121,7 +121,7 @@
 - (NSString *)calendar:(FSCalendar *)calendar titleForDate:(NSDate *)date
 {
     if ([self.gregorian isDateInToday:date]) {
-        return @"今";
+        return @"10";
     }
     return nil;
 }
