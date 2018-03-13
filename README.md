@@ -99,8 +99,6 @@ target '<Your Target Name>' do
 end
 ```
 
-https://cocoapods.org/pods/FSCalendar+Persian
-
 * For iOS7+:
 
 ```ruby
