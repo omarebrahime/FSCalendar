@@ -69,7 +69,26 @@
 
 # <a id="installation"></a>Installation
 
-## CocoaPods:
+## CocoaPods of Persian Version:
+
+* For iOS8+: 👍
+
+```ruby
+use_frameworks!
+target '<Your Target Name>' do
+    pod 'FSCalendar+Persian'
+end
+```
+
+* For iOS7+:
+
+```ruby
+target '<Your Target Name>' do
+	pod 'FSCalendar+Persian'
+end
+```
+
+## CocoaPods original version:
 
 * For iOS8+: 👍
 
@@ -79,6 +98,8 @@ target '<Your Target Name>' do
     pod 'FSCalendar'
 end
 ```
+
+https://cocoapods.org/pods/FSCalendar+Persian
 
 * For iOS7+:
 
