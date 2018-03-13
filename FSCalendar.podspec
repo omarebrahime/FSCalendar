@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
 
-  s.name             = "FSCalendar"
+  s.name             = "FSCalendar+Persian"
   s.version          = "2.7.9"
-  s.summary          = "A superiorly awesome iOS7+ calendar control, compatible with Objective-C and Swift."
+  s.summary          = "Persian version of FSCalendar. A superiorly awesome iOS7+ calendar control, compatible with Objective-C and Swift."
   
-  s.homepage         = "https://github.com/WenchaoD/FSCalendar"
-  s.screenshots      = "https://cloud.githubusercontent.com/assets/5186464/10262249/4fabae40-69f2-11e5-97ab-afbacd0a3da2.jpg"
+  s.homepage         = "https://github.com/Husseinhj/FSCalendar"
+  s.screenshots      = "https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2016.46.44.png","https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2015.26.50.png"
   s.license          = 'MIT'
-  s.author           = { "Wenchao Ding" => "f33chobits@gmail.com" }
-  s.source           = { :git => "https://github.com/WenchaoD/FSCalendar.git", :tag => s.version.to_s }
+  s.author           = { "Hussein Habibi Juybari" => "hussein.juybari@gmail.com" }
+  s.source           = { :git => "https://github.com/Husseinhj/FSCalendar.git", :tag => s.version.to_s }
 
   s.platform     = :ios
   s.ios.deployment_target = '7.0'
