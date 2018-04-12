@@ -5,7 +5,7 @@
 //  Created by dingwenchao on 11/12/2016.
 //  Copyright © 2016 Wenchao Ding. All rights reserved.
 //
-//  https://github.com/WenchaoD
+//  https://github.com/Husseinhj
 //
 //  1. Smart proxy delegation http://petersteinberger.com/blog/2013/smart-proxy-delegation/
 //  2. Manage deprecated delegation functions
