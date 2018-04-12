@@ -21,7 +21,7 @@
 
 ## <a id="screenshots"></a>Screenshots 
 
-### Persian Calendar 
+### Persian Calendar and Arabic Calendar
 
 | ![Week](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.32.47.png) | ![Month](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2014.33.06.png) | ![DIY](https://github.com/Husseinhj/FSCalendar/raw/master/ScreenShots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-03-01%20at%2016.46.44.png) |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
