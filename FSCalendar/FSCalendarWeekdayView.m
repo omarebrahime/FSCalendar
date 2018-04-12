@@ -6,10 +6,11 @@
 //  Copyright © 2016 Wenchao Ding. All rights reserved.
 //
 
-#import "FSCalendarWeekdayView.h"
 #import "FSCalendar.h"
-#import "FSCalendarDynamicHeader.h"
+#import "NSString+Category.h"
 #import "FSCalendarExtensions.h"
+#import "FSCalendarWeekdayView.h"
+#import "FSCalendarDynamicHeader.h"
 
 @interface FSCalendarWeekdayView()
 
@@ -102,7 +103,7 @@
         label.font = self.calendar.appearance.weekdayFont;
         label.textColor = self.calendar.appearance.weekdayTextColor;
         label.text = useDefaultWeekdayCase ? weekdaySymbols[index] : [weekdaySymbols[index] uppercaseString];
-        if ([_calendar.identifier isEqualToString:NSCalendarIdentifierPersian]) {
+        if ([_calendar.identifier isRTLCalendar]) {
             [label setTransform:CGAffineTransformMakeScale(-1,1)];
         }
     }
