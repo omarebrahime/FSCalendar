@@ -7,6 +7,7 @@
 //
 
 #import "FSCalendar.h"
+#import "NSString+Category.h"
 #import "FSCalendarExtensions.h"
 #import "FSCalendarDynamicHeader.h"
 
@@ -232,7 +233,7 @@
     [self fs_setVariable:[self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:self.minimumDate options:0] forKey:@"_minimumDate"];
     [self fs_setVariable:[self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:self.currentPage options:0] forKey:@"_currentPage"];
     [self fs_performSelector:NSSelectorFromString(@"scrollToPageForDate:animated") withObjects:self.today, @NO, nil];
-    if ([identifier isEqualToString:NSCalendarIdentifierPersian]) {
+    if ([identifier isRTLCalendar]) {
         [self setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
 }
