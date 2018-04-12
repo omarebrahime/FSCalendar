@@ -7,6 +7,7 @@
 //
 
 #import "FSCalendar.h"
+#import "NSString+Category.h"
 #import "FSCalendarExtensions.h"
 #import "FSCalendarHeaderView.h"
 #import "FSCalendarCollectionView.h"
@@ -108,7 +109,7 @@
 {
     FSCalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.header = self;
-    if ([self.calendar.identifier isEqualToString:NSCalendarIdentifierPersian]) {
+    if ([self.calendar.identifier isRTLCalendar]) {
         [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
     [self configureCell:cell atIndexPath:indexPath];
