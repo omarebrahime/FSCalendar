@@ -7,6 +7,7 @@
 //
 
 #import "FSCalendar.h"
+#import "NSString+Category.h"
 #import "FSCalendarHeaderView.h"
 #import "FSCalendarWeekdayView.h"
 #import "FSCalendarStickyHeader.h"
@@ -1692,7 +1693,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 -(BOOL) isPersianCalender{
-    return [self.identifier isEqualToString:NSCalendarIdentifierPersian];
+    return [self.identifier isRTLCalendar];
 }
 
 @end
