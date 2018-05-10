@@ -169,6 +169,41 @@ self.calendar = calendar
 
 > To use **FSCalendar** in Swift3, see `Example-Swift` for details.
 
+## How to use RTL calendar?
+
+It's easy (Objective-C) :
+```objc
+calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+calendar.identifier = NSCalendarIdentifierPersian;
+calendar.firstWeekday = 7;
+
+....
+
+#pragma mark - FSCalendarDataSource
+
+- (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar {
+    return [self.dateFormatter dateFromString:@"2016-07-08"];
+}
+```
+
+Swift :
+
+```swift
+
+calendar.locale = NSLocale.init(localeIdentifier: "fa-IR") as Locale
+calendar.identifier = NSCalendar.Identifier.persian.rawValue
+calendar.firstWeekday = 7
+
+....
+
+// MARK:- FSCalendarDataSource
+    
+func minimumDate(for calendar: FSCalendar) -> Date {
+    return self.formatter.date(from: "2016-07-08")!
+}
+
+```
+Also can see [here](https://github.com/Husseinhj/FSCalendar/commit/0ed037e852f4dc9b0d7569c00e21e75839aae7ef#diff-72ae6ec586cbfec0236fb013c01c9f20) where is these codes
 
 ## <a id='adjusts_frame_dynamicly' /></a>Warning 
 `FSCalendar` ***doesn't*** update frame by itself, Please implement
