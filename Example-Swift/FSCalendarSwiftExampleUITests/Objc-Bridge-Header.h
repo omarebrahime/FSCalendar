@@ -11,5 +11,6 @@
 #define FSCalendarSwiftExampleUITests_Objc_Bridge_Header_h
 
 #import "FSCalendar.h"
+#import "NSString+Category.h"
 
 #endif
