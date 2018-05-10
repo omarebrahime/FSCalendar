@@ -30,6 +30,11 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         
         let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 300
         let calendar = FSCalendar(frame: CGRect(x: 0, y: self.navigationController!.navigationBar.frame.maxY, width: view.frame.size.width, height: height))
+        
+        calendar.locale = NSLocale.init(localeIdentifier: "fa-IR") as Locale
+        calendar.identifier = NSCalendar.Identifier.persian.rawValue
+        calendar.firstWeekday = 7
+        
         calendar.dataSource = self
         calendar.delegate = self
         calendar.allowsMultipleSelection = true
@@ -98,13 +103,6 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         self.configure(cell: cell, for: date, at: position)
     }
     
-    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
-        if self.gregorian.isDateInToday(date) {
-            return "今"
-        }
-        return nil
-    }
-    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         return 2
     }
@@ -139,6 +137,10 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
             return [UIColor.orange]
         }
         return [appearance.eventDefaultColor]
+    }
+    
+    func minimumDate(for calendar: FSCalendar) -> Date {
+        return self.formatter.date(from: "2016-07-08")!
     }
     
     // MARK: - Private functions

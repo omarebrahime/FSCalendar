@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 enum SelectionType : Int {
@@ -65,10 +64,18 @@ class DIYCalendarCell: FSCalendarCell {
             self.selectionLayer.path = UIBezierPath(rect: self.selectionLayer.bounds).cgPath
         }
         else if selectionType == .leftBorder {
-            self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath
+            var corner : UIRectCorner = [.topLeft, .bottomLeft]
+            if (self.calendar.identifier.isRTLCalendar()) {
+                corner = [.topRight, .bottomRight]
+            }
+            self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath
         }
         else if selectionType == .rightBorder {
-            self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: [.topRight, .bottomRight], cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath
+            var corner : UIRectCorner = [.topRight, .bottomRight]
+            if (self.calendar.identifier.isRTLCalendar()) {
+                corner = [.topLeft, .bottomLeft]
+            }
+            self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath
         }
         else if selectionType == .single {
             let diameter: CGFloat = min(self.selectionLayer.frame.height, self.selectionLayer.frame.width)
