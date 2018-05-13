@@ -33,8 +33,10 @@ class RangePickerViewController: UIViewController, FSCalendarDataSource, FSCalen
         view.backgroundColor = UIColor.white
         self.view = view
         let calendar = FSCalendar(frame: CGRect(x: 0, y: (navigationController?.navigationBar.frame.maxY)!, width: view.frame.size.width, height: view.frame.size.height - (navigationController?.navigationBar.frame.maxY)!))
+        
         calendar.locale = NSLocale(localeIdentifier: "fa-IR") as Locale
         calendar.identifier = NSCalendar.Identifier.persian.rawValue
+        
         calendar.firstWeekday = 7
         calendar.dataSource = self
         calendar.delegate = self
@@ -43,6 +45,7 @@ class RangePickerViewController: UIViewController, FSCalendarDataSource, FSCalen
         calendar.rowHeight = 60
         calendar.placeholderType = FSCalendarPlaceholderType(rawValue: 0)!
         view.addSubview(calendar)
+        
         self.calendar = calendar
         calendar.appearance.titleDefaultColor = UIColor.black
         calendar.appearance.headerTitleColor = UIColor.black
