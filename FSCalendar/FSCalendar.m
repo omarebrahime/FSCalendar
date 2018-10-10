@@ -764,7 +764,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (void)setFirstWeekday:(NSUInteger)firstWeekday
 {
-    if (_firstWeekday != firstWeekday) {
+    //if (_firstWeekday != firstWeekday) {
         _firstWeekday = firstWeekday;
         _needsRequestingBoundingDates = YES;
         [self invalidateDateTools];
@@ -773,7 +773,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         [self configureAppearance];
         
         [self invalidateLayout];
-    }
+    //}
 }
 
 - (void)setToday:(NSDate *)today

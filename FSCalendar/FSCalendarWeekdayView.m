@@ -7,6 +7,7 @@
 //
 
 #import "FSCalendar.h"
+#import "NSLocale+Category.h"
 #import "NSString+Category.h"
 #import "FSCalendarExtensions.h"
 #import "FSCalendarWeekdayView.h"
@@ -97,17 +98,22 @@
     NSArray *weekdaySymbols = useVeryShortWeekdaySymbols ? self.calendar.gregorian.veryShortStandaloneWeekdaySymbols : self.calendar.gregorian.shortStandaloneWeekdaySymbols;
     BOOL useDefaultWeekdayCase = (self.calendar.appearance.caseOptions & (15<<4) ) == FSCalendarCaseOptionsWeekdayUsesDefaultCase;
     
+    NSInteger firstWeek = self.calendar.firstWeekday;
+    BOOL isRtl = [_calendar.identifier isRTLCalendar] && [_calendar.locale isRtlLocale];
+    if (isRtl) {
+        firstWeek = 7;
+    }
     for (NSInteger i = 0; i < self.weekdayPointers.count; i++) {
-        NSInteger index = (i + self.calendar.firstWeekday-1) % 7;
+        NSInteger index = (i + firstWeek-1) % 7;
         UILabel *label = [self.weekdayPointers pointerAtIndex:i];
         label.font = self.calendar.appearance.weekdayFont;
         label.textColor = self.calendar.appearance.weekdayTextColor;
         label.text = useDefaultWeekdayCase ? weekdaySymbols[index] : [weekdaySymbols[index] uppercaseString];
-        if ([_calendar.identifier isRTLCalendar]) {
+        
+        if (isRtl) {
             [label setTransform:CGAffineTransformMakeScale(-1,1)];
         }
     }
-
 }
 
 @end
