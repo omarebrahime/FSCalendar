@@ -45,7 +45,7 @@
     
     calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
     calendar.identifier = NSCalendarIdentifierPersian;
-    calendar.firstWeekday = 7;
+    calendar.firstWeekday = 1;
     
     calendar.dataSource = self;
     calendar.delegate = self;

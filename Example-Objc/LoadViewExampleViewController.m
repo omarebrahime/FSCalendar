@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_END
     calendar.delegate = self;
     calendar.scrollDirection = FSCalendarScrollDirectionVertical;
     calendar.backgroundColor = [UIColor whiteColor];
-    calendar.firstWeekday = 7;
+    calendar.firstWeekday = 1;
     
     
     [view addSubview:calendar];

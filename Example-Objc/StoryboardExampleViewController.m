@@ -42,14 +42,14 @@
         
         self.gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierPersian];
         
-        NSLocale *chinese = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+        NSLocale *persianLocale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
         
         self.dateFormatter1 = [[NSDateFormatter alloc] init];
-        self.dateFormatter1.locale = chinese;
+        self.dateFormatter1.locale = persianLocale;
         self.dateFormatter1.dateFormat = @"yyyy/MM/dd";
 
         self.dateFormatter2 = [[NSDateFormatter alloc] init];
-        self.dateFormatter2.locale = chinese;
+        self.dateFormatter2.locale = persianLocale;
         self.dateFormatter2.dateFormat = @"yyyy-MM-dd";
         
         self.calendar.appearance.caseOptions = FSCalendarCaseOptionsHeaderUsesUpperCase|FSCalendarCaseOptionsWeekdayUsesUpperCase;
