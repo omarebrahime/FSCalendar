@@ -175,7 +175,7 @@ It's easy (Objective-C) :
 ```objc
 calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
 calendar.identifier = NSCalendarIdentifierPersian;
-calendar.firstWeekday = 7;
+calendar.firstWeekday = 1;
 
 ....
 
@@ -192,7 +192,7 @@ Swift :
 
 calendar.locale = NSLocale.init(localeIdentifier: "fa-IR") as Locale
 calendar.identifier = NSCalendar.Identifier.persian.rawValue
-calendar.firstWeekday = 7
+calendar.firstWeekday = 1
 
 ....
 
