@@ -7,11 +7,11 @@
 - If did you set `firstWeekday` to **7** please change value to **1**
 Change:
 ```swift
-_calendar. firstWeekday = 7
+_calendar.firstWeekday = 7
 ```
 To:
 ```swift
-_calendar. firstWeekday = 1
+_calendar.firstWeekday = 1
 ```
 ## [2.8.1](https://github.com/Husseinhj/FSCalendar/releases/tag/2.8.1)
 - Fix reload bug
