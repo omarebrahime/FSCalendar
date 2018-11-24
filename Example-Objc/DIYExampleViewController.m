@@ -36,6 +36,10 @@
 
 - (void)loadView
 {
+    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierPersian];
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    self.dateFormatter.dateFormat = @"yyyy-MM-dd";
+    
     UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.view = view;
@@ -45,7 +49,7 @@
     
     calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
     calendar.identifier = NSCalendarIdentifierPersian;
-    calendar.firstWeekday = 1;
+    calendar.firstWeekday = 7;
     
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -60,7 +64,7 @@
     calendar.appearance.eventOffset = CGPointMake(0, -7);
     calendar.today = nil; // Hide the today circle
     [calendar registerClass:[DIYCalendarCell class] forCellReuseIdentifier:@"cell"];
-    
+    [calendar setCurrentPage:[NSDate date]];
     UIPanGestureRecognizer *scopeGesture = [[UIPanGestureRecognizer alloc] initWithTarget:calendar action:@selector(handleScopeGesture:)];
     [calendar addGestureRecognizer:scopeGesture];
     
@@ -85,17 +89,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-    self.dateFormatter = [[NSDateFormatter alloc] init];
-    self.dateFormatter.dateFormat = @"yyyy-MM-dd";
-    
+
     [self.calendar selectDate:[self.gregorian dateByAddingUnit:NSCalendarUnitDay value:-1 toDate:[NSDate date] options:0] scrollToDate:NO];
     [self.calendar selectDate:[NSDate date] scrollToDate:NO];
     [self.calendar selectDate:[self.gregorian dateByAddingUnit:NSCalendarUnitDay value:1 toDate:[NSDate date] options:0] scrollToDate:NO];
-    
+
     // Uncomment this to perform an 'initial-week-scope'
-    // self.calendar.scope = FSCalendarScopeWeek;
+//     self.calendar.scope = FSCalendarScopeWeek;
     
     // For UITest
     self.calendar.accessibilityIdentifier = @"calendar";
@@ -121,7 +121,7 @@
 - (NSString *)calendar:(FSCalendar *)calendar titleForDate:(NSDate *)date
 {
     if ([self.gregorian isDateInToday:date]) {
-        return @"10";
+        return @"-";
     }
     return nil;
 }
