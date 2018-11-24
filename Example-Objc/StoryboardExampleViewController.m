@@ -81,10 +81,13 @@
     if ([[UIDevice currentDevice].model hasPrefix:@"iPad"]) {
         self.calendarHeightConstraint.constant = 400;
     }
-    [self.calendar selectDate:[self.dateFormatter1 dateFromString:@"2016/12/05"] scrollToDate:YES];
+    self.calendar.identifier = NSCalendarIdentifierPersian;
+    self.calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    self.calendar.firstWeekday = 7;
     
     self.calendar.accessibilityIdentifier = @"calendar";
-    
+    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
+
 }
 
 - (void)dealloc
@@ -96,7 +99,7 @@
 
 - (NSString *)calendar:(FSCalendar *)calendar titleForDate:(NSDate *)date
 {
-    return [self.gregorianCalendar isDateInToday:date] ? @"今天" : nil;
+    return [self.gregorianCalendar isDateInToday:date] ? @"0" : nil;
 }
 
 - (NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date
@@ -117,12 +120,12 @@
 
 - (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.dateFormatter1 dateFromString:@"2016/10/01"];
+    return [self.dateFormatter1 dateFromString:@"1390/10/01"];
 }
 
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
 {
-    return [self.dateFormatter1 dateFromString:@"2018/05/31"];
+    return [self.dateFormatter1 dateFromString:@"1400/05/31"];
 }
 
 #pragma mark - FSCalendarDelegate
