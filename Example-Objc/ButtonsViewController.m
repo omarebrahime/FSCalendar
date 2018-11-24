@@ -14,7 +14,7 @@
 @property (weak, nonatomic) FSCalendar *calendar;
 @property (weak, nonatomic) UIButton *previousButton;
 @property (weak, nonatomic) UIButton *nextButton;
-
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSCalendar *gregorian;
 
 - (void)previousClicked:(id)sender;
@@ -29,7 +29,9 @@
     self = [super init];
     if (self) {
         self.title = @"FSCalendar";
-        self.gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        self.gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierPersian];
+        self.dateFormatter = [[NSDateFormatter alloc] init];
+        self.dateFormatter.dateFormat = @"yyyy-MM-dd";
     }
     return self;
 }
@@ -43,6 +45,10 @@
     // 450 for iPad and 300 for iPhone
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 64, view.frame.size.width, height)];
+    calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    calendar.identifier = NSCalendarIdentifierPersian;
+    calendar.firstWeekday = 7;
+    
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.backgroundColor = [UIColor whiteColor];
@@ -50,7 +56,8 @@
     calendar.appearance.caseOptions = FSCalendarCaseOptionsHeaderUsesUpperCase;
     [self.view addSubview:calendar];
     self.calendar = calendar;
-    
+    [calendar setCurrentPage:[NSDate date] animated:YES];
+
     UIButton *previousButton = [UIButton buttonWithType:UIButtonTypeCustom];
     previousButton.frame = CGRectMake(0, 64+5, 95, 34);
     previousButton.backgroundColor = [UIColor whiteColor];
@@ -68,7 +75,6 @@
     [nextButton addTarget:self action:@selector(nextClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:nextButton];
     self.nextButton = nextButton;
-    
 }
 
 - (void)previousClicked:(id)sender
@@ -85,5 +91,14 @@
     [self.calendar setCurrentPage:nextMonth animated:YES];
 }
 
+- (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
+{
+    return [self.dateFormatter dateFromString:@"2016-07-08"];
+}
+
+- (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
+{
+    return [self.dateFormatter dateFromString:@"2020-07-08"];
+}
 
 @end
