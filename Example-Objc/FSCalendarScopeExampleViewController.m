@@ -50,11 +50,9 @@ NS_ASSUME_NONNULL_END
         self.calendarHeightConstraint.constant = 400;
     }
     
-    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
-    
     _calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
     _calendar.identifier = NSCalendarIdentifierPersian;
-    _calendar.firstWeekday = 1;
+    _calendar.firstWeekday = 7;
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
     panGesture.delegate = self;
@@ -69,7 +67,7 @@ NS_ASSUME_NONNULL_END
     [self.calendar addObserver:self forKeyPath:@"scope" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:_KVOContext];
     
     self.calendar.scope = FSCalendarScopeWeek;
-    
+    [self.calendar selectDate:[NSDate date] scrollToDate:YES];
     // For UITest
     self.calendar.accessibilityIdentifier = @"calendar";
 }
