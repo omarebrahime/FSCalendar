@@ -150,24 +150,47 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 - (void)initialize
-{   
-    _appearance = [[FSCalendarAppearance alloc] init];
-    _appearance.calendar = self;
+{
+    if (!_appearance) {
+        _appearance = [[FSCalendarAppearance alloc] init];
+        _appearance.calendar = self;
+    }
     
-    _gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    _components = [[NSDateComponents alloc] init];
-    _formatter = [[NSDateFormatter alloc] init];
-    _formatter.dateFormat = @"yyyy-MM-dd";
-    _locale = [NSLocale currentLocale];
-    _timeZone = [NSTimeZone localTimeZone];
-    _firstWeekday = 1;
+    if (!_gregorian) {
+        _gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
+   
+    if (!_components) {
+        _components = [[NSDateComponents alloc] init];
+    }
+    if (!_formatter) {
+        _formatter = [[NSDateFormatter alloc] init];
+        _formatter.dateFormat = @"yyyy-MM-dd";
+    }
+
+    if (!_locale) {
+        _locale = [NSLocale currentLocale];
+    }
+    if (!_timeZone) {
+        _timeZone = [NSTimeZone localTimeZone];
+    }
+
+    if (!_firstWeekday || _firstWeekday == 0) {
+        _firstWeekday = 1;
+    }
     [self invalidateDateTools];
     
-    _today = [self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
-    _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
+    if (!_today) {
+        _today = [self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
+        _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
+    }
+    if (!_minimumDate) {
+        _minimumDate = [self.formatter dateFromString:@"1970-01-01"];
+    }
     
-    _minimumDate = [self.formatter dateFromString:@"1970-01-01"];
-    _maximumDate = [self.formatter dateFromString:@"2099-12-31"];
+    if (!_maximumDate) {
+        _maximumDate = [self.formatter dateFromString:@"2099-12-31"];
+    }
     
     _headerHeight     = FSCalendarAutomaticDimension;
     _weekdayHeight    = FSCalendarAutomaticDimension;
@@ -179,8 +202,12 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     
     _scrollDirection = FSCalendarScrollDirectionHorizontal;
     _scope = FSCalendarScopeMonth;
-    _selectedDates = [NSMutableArray arrayWithCapacity:1];
-    _visibleSectionHeaders = [NSMapTable weakToWeakObjectsMapTable];
+    if (!_selectedDates) {
+        _selectedDates = [NSMutableArray arrayWithCapacity:1];
+    }
+    if (!_visibleSectionHeaders) {
+        _visibleSectionHeaders = [NSMapTable weakToWeakObjectsMapTable];
+    }
     
     _pagingEnabled = YES;
     _scrollEnabled = YES;
@@ -192,20 +219,22 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _dataSourceProxy = [FSCalendarDelegationFactory dataSourceProxy];
     _delegateProxy = [FSCalendarDelegationFactory delegateProxy];
     
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
-    contentView.backgroundColor = [UIColor clearColor];
-    [self addSubview:contentView];
+    if (!self.contentView) {
+        UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
+        contentView.backgroundColor = [UIColor clearColor];
+        [self addSubview:contentView];
     self.contentView = contentView;
     
     UIView *daysContainer = [[UIView alloc] initWithFrame:CGRectZero];
     daysContainer.backgroundColor = [UIColor clearColor];
     daysContainer.clipsToBounds = YES;
-    [contentView addSubview:daysContainer];
-    self.daysContainer = daysContainer;
-    
-    FSCalendarCollectionViewLayout *collectionViewLayout = [[FSCalendarCollectionViewLayout alloc] init];
-    collectionViewLayout.calendar = self;
-    
+        [contentView addSubview:daysContainer];
+        self.daysContainer = daysContainer;
+        
+        if (!self.collectionViewLayout) {
+            FSCalendarCollectionViewLayout *collectionViewLayout = [[FSCalendarCollectionViewLayout alloc] init];
+            collectionViewLayout.calendar = self;
+            
     FSCalendarCollectionView *collectionView = [[FSCalendarCollectionView alloc] initWithFrame:CGRectZero
                                                                           collectionViewLayout:collectionViewLayout];
     collectionView.dataSource = self;
@@ -220,34 +249,46 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     [collectionView registerClass:[FSCalendarBlankCell class] forCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier];
     [collectionView registerClass:[FSCalendarStickyHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"placeholderHeader"];
-    [daysContainer addSubview:collectionView];
-    self.collectionView = collectionView;
-    self.collectionViewLayout = collectionViewLayout;
+            [daysContainer addSubview:collectionView];
+            self.collectionView = collectionView;
+            self.collectionViewLayout = collectionViewLayout;
+        }
+    }
     
     if (!FSCalendarInAppExtension) {
-        
-        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-        view.backgroundColor = FSCalendarStandardLineColor;
-        view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin; // Stick to top
+        if (!self.topBorder && !self.bottomBorder) {
+            UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+            view.backgroundColor = FSCalendarStandardLineColor;
+            view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin; // Stick to top
         [self addSubview:view];
         self.topBorder = view;
         
         view = [[UIView alloc] initWithFrame:CGRectZero];
         view.backgroundColor = FSCalendarStandardLineColor;
-        view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin; // Stick to bottom
-        [self addSubview:view];
-        self.bottomBorder = view;
-        
+            view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin; // Stick to bottom
+            [self addSubview:view];
+            self.bottomBorder = view;
+        }
     }
     
     [self invalidateLayout];
     
     // Assistants
-    self.transitionCoordinator = [[FSCalendarTransitionCoordinator alloc] initWithCalendar:self];
-    self.calculator = [[FSCalendarCalculator alloc] initWithCalendar:self];
+    if (!self.transitionCoordinator) {
+        self.transitionCoordinator = [[FSCalendarTransitionCoordinator alloc] initWithCalendar:self];
+    }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    if (!self.calculator) {
+        self.calculator = [[FSCalendarCalculator alloc] initWithCalendar:self];
+    }
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIDeviceOrientationDidChangeNotification
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationDidChange:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
 }
 
 - (void)dealloc
