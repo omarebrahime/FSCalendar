@@ -223,11 +223,11 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
         contentView.backgroundColor = [UIColor clearColor];
         [self addSubview:contentView];
-    self.contentView = contentView;
-    
-    UIView *daysContainer = [[UIView alloc] initWithFrame:CGRectZero];
-    daysContainer.backgroundColor = [UIColor clearColor];
-    daysContainer.clipsToBounds = YES;
+        self.contentView = contentView;
+        
+        UIView *daysContainer = [[UIView alloc] initWithFrame:CGRectZero];
+        daysContainer.backgroundColor = [UIColor clearColor];
+        daysContainer.clipsToBounds = YES;
         [contentView addSubview:daysContainer];
         self.daysContainer = daysContainer;
         
@@ -235,20 +235,20 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             FSCalendarCollectionViewLayout *collectionViewLayout = [[FSCalendarCollectionViewLayout alloc] init];
             collectionViewLayout.calendar = self;
             
-    FSCalendarCollectionView *collectionView = [[FSCalendarCollectionView alloc] initWithFrame:CGRectZero
-                                                                          collectionViewLayout:collectionViewLayout];
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
-    collectionView.backgroundColor = [UIColor clearColor];
-    collectionView.pagingEnabled = YES;
-    collectionView.showsHorizontalScrollIndicator = NO;
-    collectionView.showsVerticalScrollIndicator = NO;
-    collectionView.allowsMultipleSelection = NO;
-    collectionView.clipsToBounds = YES;
-    [collectionView registerClass:[FSCalendarCell class] forCellWithReuseIdentifier:FSCalendarDefaultCellReuseIdentifier];
-    [collectionView registerClass:[FSCalendarBlankCell class] forCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier];
-    [collectionView registerClass:[FSCalendarStickyHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-    [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"placeholderHeader"];
+            FSCalendarCollectionView *collectionView = [[FSCalendarCollectionView alloc] initWithFrame:CGRectZero
+                                                                                  collectionViewLayout:collectionViewLayout];
+            collectionView.dataSource = self;
+            collectionView.delegate = self;
+            collectionView.backgroundColor = [UIColor clearColor];
+            collectionView.pagingEnabled = YES;
+            collectionView.showsHorizontalScrollIndicator = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.allowsMultipleSelection = NO;
+            collectionView.clipsToBounds = YES;
+            [collectionView registerClass:[FSCalendarCell class] forCellWithReuseIdentifier:FSCalendarDefaultCellReuseIdentifier];
+            [collectionView registerClass:[FSCalendarBlankCell class] forCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier];
+            [collectionView registerClass:[FSCalendarStickyHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+            [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"placeholderHeader"];
             [daysContainer addSubview:collectionView];
             self.collectionView = collectionView;
             self.collectionViewLayout = collectionViewLayout;
@@ -260,11 +260,11 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
             view.backgroundColor = FSCalendarStandardLineColor;
             view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin; // Stick to top
-        [self addSubview:view];
-        self.topBorder = view;
-        
-        view = [[UIView alloc] initWithFrame:CGRectZero];
-        view.backgroundColor = FSCalendarStandardLineColor;
+            [self addSubview:view];
+            self.topBorder = view;
+            
+            view = [[UIView alloc] initWithFrame:CGRectZero];
+            view.backgroundColor = FSCalendarStandardLineColor;
             view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin; // Stick to bottom
             [self addSubview:view];
             self.bottomBorder = view;
@@ -805,7 +805,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (void)setFirstWeekday:(NSUInteger)firstWeekday
 {
-    //if (_firstWeekday != firstWeekday) {
+    if (_firstWeekday != firstWeekday) {
         _firstWeekday = firstWeekday;
         _needsRequestingBoundingDates = YES;
         [self invalidateDateTools];
@@ -814,7 +814,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         [self configureAppearance];
         
         [self invalidateLayout];
-    //}
+    }
 }
 
 - (void)setToday:(NSDate *)today

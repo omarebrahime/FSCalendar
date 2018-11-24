@@ -100,7 +100,7 @@
     
     NSInteger firstWeek = self.calendar.firstWeekday;
     BOOL isRtl = [_calendar.identifier isRTLCalendar] && [_calendar.locale isRtlLocale];
-    if (isRtl) {
+    if (isRtl && [_calendar.locale isEqual:@"fa-IR"]) {
         firstWeek = 7;
     }
     for (NSInteger i = 0; i < self.weekdayPointers.count; i++) {
