@@ -28,9 +28,9 @@ Please follow read the documentation and see the examples of each feature. Don't
 <td>Arabic</td>
 </tr>
 <tr>
-<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/DIY-Example-en.png" width="30%"></td>
-<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/DIY-Example-fa.png" width="30%"></td>
-<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png" width="30%"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/DIY-Example-en.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/DIY-Example-fa.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png"></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
