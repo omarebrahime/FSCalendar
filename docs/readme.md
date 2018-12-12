@@ -33,24 +33,19 @@ Please follow read the documentation and see the examples of each feature. Don't
 <td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png"></td>
 </tr>
 <tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/FSCalendarScope-Example-en.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/FSCalendarScope-Example-fa.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/FSCalendarScope-Example-ar.png"></td>
 </tr>
 <tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/Delegate-Appearance-en.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/Delegate-Appearance-fa.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/Delegate-Appearance-ar.png"></td>
 </tr>
 <tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/Range-Picker-Example-en.png"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/Range-Picker-Example-fa.png"> </td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/Range-Picker-Example-ar.png"></td>
 </tr>
 </tbody>
 </table>
