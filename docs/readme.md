@@ -15,7 +15,7 @@ Please follow read the documentation and see the examples of each feature. Don't
 7. Scopes
 8. Add achivements
 9. Persian/Arabic calendar
-10. Contirbution
+10. Contribution
 11. Support
 
 ## Screenshots
