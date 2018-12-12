@@ -1,4 +1,3 @@
-
 # RTL support version of FSCalendar
 
 This is the powerful, easy and elegant calendar for **iOS** platform. We changed the [FSCalendar](https://github.com/WenchaoD/FSCalendar) for supporting **Righ to Left** calendars such as Persian and Arabic and also support FSCalendar last versions. Thanks to [@WenchaoD](https://github.com/WenchaoD) to create this awesome calendar we just change some part of codes and create useful documenate for **FSCalander** which has support **RTL** calendars.
@@ -20,6 +19,38 @@ Please follow read the documentation and see the examples of each feature. Don't
 11. Support
 
 ## Screenshots
-|English|Persian|Arabic|
-|--|--|--|
-| <img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/DIY-Example-en.png" width="30%"> | <img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/DIY-Example-fa.png" width="30%"> | <img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png" width="30%"> |
+
+<table>
+<tbody>
+<tr>
+<td>English</td>
+<td>Persian</td>
+<td>Arabic</td>
+</tr>
+<tr>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/DIY-Example-en.png" width="30%"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Persian/DIY-Example-fa.png" width="30%"></td>
+<td><img src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png" width="30%"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
