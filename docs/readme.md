@@ -6,7 +6,7 @@ Please follow read the documentation and see the examples of each feature. Don't
 
 ## Table of contents
 
-1. Screenshots
+1. [Screenshots](https://husseinhj.github.io/FSCalendar/#screenshots)
 2. Overview
 3. Installation
 4. Simple usage
