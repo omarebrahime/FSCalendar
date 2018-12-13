@@ -1,4 +1,5 @@
 
+
 # RTL support version of FSCalendar
 
 This is the powerful, easy and elegant calendar for **iOS** platform. We changed the [FSCalendar](https://github.com/WenchaoD/FSCalendar) for supporting **Righ to Left** calendars such as Persian and Arabic and also support FSCalendar last versions. Thanks to [@WenchaoD](https://github.com/WenchaoD) to create this awesome calendar we just change some part of codes and create useful documenate for **FSCalander** which has support **RTL** calendars.
@@ -56,14 +57,17 @@ Make sure you have [CocoaPods](https://cocoapods.org/) on your Mac OS.
 
 ### CocoaPods
 
-1. Add `FSCalendar+Persian` to Podfile:
+1) Add `FSCalendar+Persian` to Podfile:
+
 ```ruby
 use_frameworks!
 target '<Your_Target_Name>' do
     pod 'FSCalendar+Persian'
 end
 ``` 
-2. Open terminal app and change current directory to root of your project path and follow this command:
+
+2) Open terminal app and change current directory to root of your project path and follow this command:
+
 ```ruby
 pod install
 ```
