@@ -119,7 +119,7 @@ func initializeFSCalelndar(){
 #import "FSCalendar.h"
 
 - (void) initializeFSCalendar{
-    if (self.fsCalendar) {
+    if (self.calendar) {
         return;
     }
     CGRect frame = CGRectMake(0,
@@ -140,7 +140,7 @@ func initializeFSCalelndar(){
     calendar.delegate = self;
     calendar.backgroundColor = [UIColor whiteColor];
     
-    self.fsCalendar = calendar;
+    self.calendar = calendar;
     [self.view addSubview:calendar];
     self.view.backgroundColor = [UIColor whiteColor];
 }
