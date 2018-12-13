@@ -7,16 +7,15 @@ Please follow read the documentation and see the examples of each feature. Don't
 ## Table of contents
 
 1. [Screenshots](https://husseinhj.github.io/FSCalendar/#screenshots)
-2. Overview
-3. Installation
-4. Simple usage
-5. Show event
-6. Range selection
-7. Scopes
-8. Add achivements
-9. Persian/Arabic calendar
-10. Contribution
-11. Support
+2. Installation
+3. Simple usage
+4. Show event
+5. Range selection
+6. Scopes
+7. Add achivements
+8. Persian/Arabic calendar
+9. Contribution
+10. Support
 
 ## Screenshots
 
