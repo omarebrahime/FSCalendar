@@ -51,6 +51,7 @@ Please follow read the documentation and see the examples of each feature. Don't
 </table>
 
 ## Installation
+
 Make sure you have [CocoaPods](https://cocoapods.org/) on your Mac OS.
 
 ### CocoaPods
@@ -63,6 +64,7 @@ target '<Your_Target_Name>' do
     pod 'FSCalendar+Persian'
 end
 ``` 
+
 2. Open terminal app and change current directory to root of your project path and follow this command:
 
 ```ruby
