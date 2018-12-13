@@ -91,14 +91,23 @@ func initializeFSCalelndar(){
                        height: 300)
 
 	let calendar = FSCalendar(frame: frame)
-	
+        
+	//For change to Persian calendar
+	//calendar.identifier = NSCalendar.Identifier.persian.rawValue
+	//calendar.locale = Locale(identifier: "fa-IR")
+        
+	//Change to Arabic calendar
+	//calendar.identifier = NSCalendar.Identifier.islamicCivil.rawValue
+	//calendar.locale = Locale(identifier: "ar")
+        
 	calendar.dataSource = self
 	calendar.delegate = self
 	calendar.backgroundColor = UIColor.white
-	
+        
 	self.calendar = calendar
+        
 	self.view.addSubview(calendar)
-	self.view.backgroundColor = UIColor.white
+	self.view.backgroundColor = UIColor.groupTableViewBackground
 }
 ```
 
