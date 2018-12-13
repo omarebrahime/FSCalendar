@@ -102,13 +102,13 @@ func initializeFSCalelndar(){
 }
 ```
 
-<details><summary>Objective-C</summary>
-<p>
+<details> <summary>Objective-C</summary>
 
-<pre><code class="language-objectivec">#import "FSCalendar.h"
+```objectivec
+#import "FSCalendar.h"
 
 - (void) initializeFSCalendar{
-    if (self.calendar) {
+    if (self.fsCalendar) {
         return;
     }
     CGRect frame = CGRectMake(0,
@@ -116,17 +116,23 @@ func initializeFSCalelndar(){
                               self.view.frame.size.width,
                               300);
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:frame];
+
+    //For change to Persian calendar
+    //calendar.identifier = NSCalendarIdentifierPersian;
+    //calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
+    
+    //Change to Arabic calendar
+    //calendar.identifier = NSCalendarIdentifierIslamicCivil;
+    //calendar.locale = [NSLocale localeWithLocaleIdentifier:@"ar"];
     
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.backgroundColor = [UIColor whiteColor];
     
-    self.calendar = calendar;
+    self.fsCalendar = calendar;
     [self.view addSubview:calendar];
     self.view.backgroundColor = [UIColor whiteColor];
 }
-</code></pre>
+```
 
-
-</p>
 </details>
