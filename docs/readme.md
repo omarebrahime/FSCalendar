@@ -7,8 +7,8 @@ Please follow read the documentation and see the examples of each feature. Don't
 
 ## Table of contents
 
-1. [Screenshots](https://husseinhj.github.io/FSCalendar/#screenshots)
-2. [Installation](https://husseinhj.github.io/FSCalendar/#Installation)
+1. [Screenshots](#screenshots)
+2. [Installation](#Installation)
 3. Simple usage
 4. Show event
 5. Range selection
