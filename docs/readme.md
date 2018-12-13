@@ -1,6 +1,3 @@
-
-
-
 # RTL support version of FSCalendar
 
 This is the powerful, easy and elegant calendar for **iOS** platform. We changed the [FSCalendar](https://github.com/WenchaoD/FSCalendar) for supporting **Righ to Left** calendars such as Persian and Arabic and also support FSCalendar last versions. Thanks to [@WenchaoD](https://github.com/WenchaoD) to create this awesome calendar we just change some part of codes and create useful documenate for **FSCalander** which has support **RTL** calendars.
@@ -81,14 +78,55 @@ github "Husseinhj/FSCalendar"
 
 ## Usage
 
-<details><summary>Objective-C Code</summary>
+`Init` FSCalendar and add to view you want to show inside.
+
+``` swift
+func initializeFSCalelndar(){
+	if self.calendar != nil {
+		return
+	}
+	let frame = CGRect(x: 0,
+                       y: 0,
+                       width: self.view.bounds.width,
+                       height: 300)
+
+	let calendar = FSCalendar(frame: frame)
+	
+	calendar.dataSource = self
+	calendar.delegate = self
+	calendar.backgroundColor = UIColor.white
+	
+	self.calendar = calendar
+	self.view.addSubview(calendar)
+	self.view.backgroundColor = UIColor.white
+}
+```
+
+<details><summary>Objective-C</summary>
 <p>
 
-#### yes, even hidden code blocks!
+<pre><code class="language-objectivec">#import "FSCalendar.h"
 
-```python
-NSLOG(@"hello world!");
-```
+- (void) initializeFSCalendar{
+    if (self.calendar) {
+        return;
+    }
+    CGRect frame = CGRectMake(0,
+                              0,
+                              self.view.frame.size.width,
+                              300);
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:frame];
+    
+    calendar.dataSource = self;
+    calendar.delegate = self;
+    calendar.backgroundColor = [UIColor whiteColor];
+    
+    self.calendar = calendar;
+    [self.view addSubview:calendar];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+</code></pre>
+
 
 </p>
 </details>
