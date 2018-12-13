@@ -10,10 +10,10 @@ Please follow read the documentation and see the examples of each feature. Don't
 
 1. [Screenshots](#screenshots)
 2. [Installation](#Installation)
-3. Simple usage
+3. Usage
 4. Show event
 5. Range selection
-6. Scopes
+6. Scope
 7. Add achivements
 8. Persian/Arabic calendar
 9. Contribution
