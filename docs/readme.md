@@ -57,16 +57,13 @@ Make sure you have [CocoaPods](https://cocoapods.org/) on your Mac OS.
 ### CocoaPods
 
 1. Add `FSCalendar+Persian` to Podfile:
-
 ```ruby
 use_frameworks!
 target '<Your_Target_Name>' do
     pod 'FSCalendar+Persian'
 end
 ``` 
-
 2. Open terminal app and change current directory to root of your project path and follow this command:
-
 ```ruby
 pod install
 ```
