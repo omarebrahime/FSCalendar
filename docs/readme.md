@@ -95,10 +95,12 @@ func initializeFSCalelndar(){
 	//For change to Persian calendar
 	//calendar.identifier = NSCalendar.Identifier.persian.rawValue
 	//calendar.locale = Locale(identifier: "fa-IR")
-        
+	//calendar.firstWeekday = 7
+
 	//Change to Arabic calendar
 	//calendar.identifier = NSCalendar.Identifier.islamicCivil.rawValue
 	//calendar.locale = Locale(identifier: "ar")
+	//calendar.firstWeekday = 7
         
 	calendar.dataSource = self
 	calendar.delegate = self
@@ -119,7 +121,7 @@ func initializeFSCalelndar(){
 #import "FSCalendar.h"
 
 - (void) initializeFSCalendar{
-    if (self.calendar) {
+    if (self.fsCalendar) {
         return;
     }
     CGRect frame = CGRectMake(0,
@@ -131,16 +133,18 @@ func initializeFSCalelndar(){
     //For change to Persian calendar
     //calendar.identifier = NSCalendarIdentifierPersian;
     //calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
-    
+    //calendar.firstWeekday = 7
+
     //Change to Arabic calendar
     //calendar.identifier = NSCalendarIdentifierIslamicCivil;
     //calendar.locale = [NSLocale localeWithLocaleIdentifier:@"ar"];
-    
+    //calendar.firstWeekday = 7
+
     calendar.dataSource = self;
     calendar.delegate = self;
     calendar.backgroundColor = [UIColor whiteColor];
     
-    self.calendar = calendar;
+    self.fsCalendar = calendar;
     [self.view addSubview:calendar];
     self.view.backgroundColor = [UIColor whiteColor];
 }
