@@ -350,4 +350,4 @@ BOOL inSameUnit = [self.gregorian isDate:date1 equalToDate:date2 toUnitGranulari
 # License
 FSCalendar is available under the MIT license. See the LICENSE file for more info.
 
-### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | 
+### [Documentation](https://husseinhj.github.io/FSCalendar/) | [More Usage](https://github.com/Husseinhj/FSCalendar/blob/master/MOREUSAGE.md) | 
