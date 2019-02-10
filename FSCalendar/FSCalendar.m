@@ -767,6 +767,26 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 #pragma mark - Properties
 
+- (void)setCalendarIdentifier:(NSString *)identifier{
+    self.gregorian = [NSCalendar calendarWithIdentifier:identifier];
+    if ([identifier isRTLCalendar]) {
+        //TODO: Totall view did change the direction.
+        [self setTransform:CGAffineTransformMakeScale(-1, 1)];
+    }
+    _today = [self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
+    _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
+    
+    [self invalidateDateTools];
+    [self configureAppearance];
+    if (self.hasValidateVisibleLayout) {
+        [self invalidateHeaders];
+    }
+}
+
+- (NSString *)calendarIdentifier{
+    return self.gregorian.calendarIdentifier;
+}
+
 - (void)setScrollDirection:(FSCalendarScrollDirection)scrollDirection
 {
     if (_scrollDirection != scrollDirection) {
