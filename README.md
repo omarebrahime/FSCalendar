@@ -2,7 +2,7 @@
 
 ![logo](https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/ScreenShots/FSCalendar-Persian.png)
 <br>
-[![Build Status](https://travis-ci.org/Husseinhj/FSCalendar+Persian.svg?branch=master)](https://travis-ci.org/Husseinhj/FSCalendar)
+[![Build Status](https://travis-ci.org/Husseinhj/FSCalendar.svg?branch=master)](https://travis-ci.org/Husseinhj/FSCalendar)
 [![Version](https://img.shields.io/cocoapods/v/FSCalendar+Persian.svg?style=flat)](http://cocoadocs.org/docsets/FSCalendar+Persian)
 
 [![Platform](https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat)](http://cocoadocs.org/docsets/FSCalendar+Persian)
