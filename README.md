@@ -1,12 +1,10 @@
 
 
 ![logo](https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/ScreenShots/FSCalendar-Persian.png)
-<br/><br/>
-[![Apps Using](https://img.shields.io/cocoapods/at/FSCalendar+Persian.svg)](https://cocoapods.org/pods/FSCalendar+Persian)
-[![Total Downloads](https://img.shields.io/cocoapods/dt/FSCalendar+Persian.svg)](https://cocoapods.org/pods/FSCalendar+Persian)
 <br>
 [![Build Status](https://travis-ci.org/Husseinhj/FSCalendar+Persian.svg?branch=master)](https://travis-ci.org/Husseinhj/FSCalendar)
 [![Version](https://img.shields.io/cocoapods/v/FSCalendar+Persian.svg?style=flat)](http://cocoadocs.org/docsets/FSCalendar+Persian)
+
 [![Platform](https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat)](http://cocoadocs.org/docsets/FSCalendar+Persian)
 [![Carthage compatible](https://img.shields.io/cocoapods/p/FSCalendar+Persian.svg)](https://github.com/Carthage/Carthage)
 <br>
