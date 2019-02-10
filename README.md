@@ -67,7 +67,7 @@
 
 # <a id="installation"></a>Installation
 
-## CocoaPods of Persian Version:
+## CocoaPods of RTL support Version:
 
 * For iOS8+: 👍
 
@@ -83,25 +83,6 @@ end
 ```ruby
 target '<Your Target Name>' do
 	pod 'FSCalendar+Persian'
-end
-```
-
-## CocoaPods original version:
-
-* For iOS8+: 👍
-
-```ruby
-use_frameworks!
-target '<Your Target Name>' do
-    pod 'FSCalendar'
-end
-```
-
-* For iOS7+:
-
-```ruby
-target '<Your Target Name>' do
-	pod 'FSCalendar'
 end
 ```
 
@@ -369,4 +350,4 @@ BOOL inSameUnit = [self.gregorian isDate:date1 equalToDate:date2 toUnitGranulari
 # License
 FSCalendar is available under the MIT license. See the LICENSE file for more info.
 
-### [Documentation](http://cocoadocs.org/docsets/FSCalendar/) | [More Usage](https://github.com/WenchaoD/FSCalendar/blob/master/MOREUSAGE.md) | 
+### [Documentation](https://husseinhj.github.io/FSCalendar/) | [More Usage](https://github.com/Husseinhj/FSCalendar/blob/master/MOREUSAGE.md) | 
