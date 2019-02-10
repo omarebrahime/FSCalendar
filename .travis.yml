@@ -8,5 +8,4 @@ script:
     - xcodebuild -project Example-TodayExtension1/Example-TodayExtension.xcodeproj -sdk iphonesimulator -alltargets
     - xcodebuild -project Example-TodayExtension2/Example-TodayExtension.xcodeproj -sdk iphonesimulator -alltargets
     
-
-pod trunk push FSCalendar+Persian.podspec
+    - pod trunk push FSCalendar+Persian.podspec
