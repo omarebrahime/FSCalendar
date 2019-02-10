@@ -1,5 +1,9 @@
 # Change Log
 
+## [2.9.2](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.2)
+### Changes :
+- Fix bug crash library in Persian locale if `minimumDate` method wasn't implemented by developer. now implementing the `minimumDate()` not force anymore.
+
 ## [2.9.1](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.1)
 ### Changes :
 - Fix bug for supporting iOS 7.0
