@@ -295,6 +295,8 @@ IB_DESIGNABLE
  */
 @property (copy, nonatomic) NSLocale *locale;
 
+@property (strong, nonatomic) NSString *calendarIdentifier;
+
 /**
  * The scroll direction of FSCalendar. 
  *
