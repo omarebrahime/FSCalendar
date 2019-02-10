@@ -1,8 +1,13 @@
 # Change Log
 
-## [2.8.2](https://github.com/Husseinhj/FSCalendar/releases/tag/v2.8.2)
+## [2.9.0](https://github.com/Husseinhj/FSCalendar/releases/tag/v2.9.0)
+### Changes :
 - Fix bug show weeks title.
 - Fix bug show current day wrong
+- Fix bug show current month
+
+### Upgrade note:
+- Change `identifier` to `calendarIdentifier` property.
 
 ## [2.8.1](https://github.com/Husseinhj/FSCalendar/releases/tag/2.8.1)
 - Fix reload bug
