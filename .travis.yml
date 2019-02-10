@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode10
 
 script:
 
@@ -7,3 +7,5 @@ script:
     - xcodebuild -project Example-Swift/FSCalendarSwiftExample.xcodeproj -sdk iphonesimulator -alltargets
     - xcodebuild -project Example-TodayExtension1/Example-TodayExtension.xcodeproj -sdk iphonesimulator -alltargets
     - xcodebuild -project Example-TodayExtension2/Example-TodayExtension.xcodeproj -sdk iphonesimulator -alltargets
+    
+    - pod trunk push FSCalendar+Persian.podspec --allow-warnings
