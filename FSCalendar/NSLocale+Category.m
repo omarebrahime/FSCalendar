@@ -11,12 +11,11 @@
 @implementation NSLocale(Category)
 
 -(BOOL) isRtlLocale {
-    NSString *langCode = self.languageCode;
-    NSLocaleLanguageDirection langDirction = NSLocaleLanguageDirectionLeftToRight;
-    
-    if (langCode) {
-        langDirction = [NSLocale characterDirectionForLanguage:langCode];
-    }
+    NSString *lanId = self.localeIdentifier;
+    NSArray<NSString *> *langSep = [lanId componentsSeparatedByString:@"-"];
+  
+    NSLocaleLanguageDirection langDirction = [NSLocale characterDirectionForLanguage:langSep.firstObject];
+
     return langDirction;
 }
 
