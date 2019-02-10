@@ -1,6 +1,10 @@
 # Change Log
 
-## [2.9.0](https://github.com/Husseinhj/FSCalendar/releases/tag/v2.9.0)
+## [2.9.1](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.1)
+### Changes :
+- Fix bug for supporting iOS 7.0
+
+## [2.9.0](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.0)
 ### Changes :
 - Fix bug show weeks title.
 - Fix bug show current day wrong
