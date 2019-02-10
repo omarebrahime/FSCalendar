@@ -32,8 +32,8 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         let calendar = FSCalendar(frame: CGRect(x: 0, y: self.navigationController!.navigationBar.frame.maxY, width: view.frame.size.width, height: height))
         
         calendar.locale = NSLocale.init(localeIdentifier: "fa-IR") as Locale
-        calendar.identifier = NSCalendar.Identifier.persian.rawValue
-        calendar.firstWeekday = 1
+        calendar.calendarIdentifier = NSCalendar.Identifier.persian.rawValue
+        calendar.firstWeekday = 7
         
         calendar.dataSource = self
         calendar.delegate = self
@@ -98,11 +98,11 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
         return cell
     }
-    
+
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at position: FSCalendarMonthPosition) {
         self.configure(cell: cell, for: date, at: position)
     }
-    
+
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         return 2
     }

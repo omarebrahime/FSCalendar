@@ -65,14 +65,14 @@ class DIYCalendarCell: FSCalendarCell {
         }
         else if selectionType == .leftBorder {
             var corner : UIRectCorner = [.topLeft, .bottomLeft]
-            if (self.calendar.identifier.isRTLCalendar()) {
+            if (self.calendar.calendarIdentifier.isRTLCalendar()) {
                 corner = [.topRight, .bottomRight]
             }
             self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath
         }
         else if selectionType == .rightBorder {
             var corner : UIRectCorner = [.topRight, .bottomRight]
-            if (self.calendar.identifier.isRTLCalendar()) {
+            if (self.calendar.calendarIdentifier.isRTLCalendar()) {
                 corner = [.topLeft, .bottomLeft]
             }
             self.selectionLayer.path = UIBezierPath(roundedRect: self.selectionLayer.bounds, byRoundingCorners: corner, cornerRadii: CGSize(width: self.selectionLayer.frame.width / 2, height: self.selectionLayer.frame.width / 2)).cgPath

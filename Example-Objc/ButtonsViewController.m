@@ -46,7 +46,7 @@
     CGFloat height = [[UIDevice currentDevice].model hasPrefix:@"iPad"] ? 450 : 300;
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 64, view.frame.size.width, height)];
     calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
-    calendar.identifier = NSCalendarIdentifierPersian;
+    calendar.calendarIdentifier = NSCalendarIdentifierPersian;
     calendar.firstWeekday = 7;
     
     calendar.dataSource = self;

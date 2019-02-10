@@ -15,7 +15,7 @@
 
 @implementation FSCalendar (Deprecated)
 
-@dynamic identifier, lineHeightMultiplier;
+// identifier, lineHeightMultiplier;
 
 - (void)setShowsPlaceholders:(BOOL)showsPlaceholders
 {
@@ -234,6 +234,7 @@
     [self fs_setVariable:[self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:self.currentPage options:0] forKey:@"_currentPage"];
     [self fs_performSelector:NSSelectorFromString(@"scrollToPageForDate:animated") withObjects:self.today, @NO, nil];
     if ([identifier isRTLCalendar]) {
+        //TODO: Totall view did change the direction.
         [self setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
 }

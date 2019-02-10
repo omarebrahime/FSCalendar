@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_END
     }
     
     _calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
-    _calendar.identifier = NSCalendarIdentifierPersian;
+    _calendar.calendarIdentifier = NSCalendarIdentifierPersian;
     _calendar.firstWeekday = 7;
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.calendar action:@selector(handleScopeGesture:)];
