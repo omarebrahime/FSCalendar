@@ -35,9 +35,9 @@ class RangePickerViewController: UIViewController, FSCalendarDataSource, FSCalen
         let calendar = FSCalendar(frame: CGRect(x: 0, y: (navigationController?.navigationBar.frame.maxY)!, width: view.frame.size.width, height: view.frame.size.height - (navigationController?.navigationBar.frame.maxY)!))
         
         calendar.locale = NSLocale(localeIdentifier: "fa-IR") as Locale
-        calendar.identifier = NSCalendar.Identifier.persian.rawValue
+        calendar.calendarIdentifier = NSCalendar.Identifier.persian.rawValue
         
-        calendar.firstWeekday = 1
+        calendar.firstWeekday = 7
         calendar.dataSource = self
         calendar.delegate = self
         calendar.pagingEnabled = false

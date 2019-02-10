@@ -109,7 +109,7 @@
 {
     FSCalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.header = self;
-    if ([self.calendar.identifier isRTLCalendar]) {
+    if ([self.calendar.calendarIdentifier isRTLCalendar]) {
         [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
     [self configureCell:cell atIndexPath:indexPath];

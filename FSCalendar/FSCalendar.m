@@ -521,7 +521,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             break;
         }
     }
-    
+
     NSDate *date = [self.calculator dateForIndexPath:indexPath];
     FSCalendarCell *cell = [self.dataSourceProxy calendar:self cellForDate:date atMonthPosition:monthPosition];
     if (!cell) {
@@ -1750,7 +1750,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 -(BOOL) isPersianCalender{
-    return [self.identifier isRTLCalendar];
+    return [self.calendarIdentifier isRTLCalendar];
 }
 
 @end

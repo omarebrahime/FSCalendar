@@ -99,7 +99,7 @@
     BOOL useDefaultWeekdayCase = (self.calendar.appearance.caseOptions & (15<<4) ) == FSCalendarCaseOptionsWeekdayUsesDefaultCase;
     
     NSInteger firstWeek = self.calendar.firstWeekday;
-    BOOL isRtl = [_calendar.identifier isRTLCalendar] && [_calendar.locale isRtlLocale];
+    BOOL isRtl = [_calendar.calendarIdentifier isRTLCalendar] && [_calendar.locale isRtlLocale];
     if (isRtl && [_calendar.locale isEqual:@"fa-IR"]) {
         firstWeek = 7;
     }
