@@ -49,7 +49,7 @@
         
     } else if (self.selectionType == SelectionTypeLeftBorder) {
         UIRectCorner corner = UIRectCornerTopLeft|UIRectCornerBottomLeft;
-        if ([self.calendar.identifier isRTLCalendar]) {
+        if ([self.calendar.calendarIdentifier isRTLCalendar]) {
             corner = UIRectCornerTopRight|UIRectCornerBottomRight;
         }
         
@@ -57,7 +57,7 @@
         
     } else if (self.selectionType == SelectionTypeRightBorder) {
         UIRectCorner corner = UIRectCornerTopRight|UIRectCornerBottomRight;
-        if ([self.calendar.identifier isRTLCalendar]) {
+        if ([self.calendar.calendarIdentifier isRTLCalendar]) {
             corner = UIRectCornerTopLeft|UIRectCornerBottomLeft;
         }
         self.selectionLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.selectionLayer.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(self.selectionLayer.fs_width/2, self.selectionLayer.fs_width/2)].CGPath;

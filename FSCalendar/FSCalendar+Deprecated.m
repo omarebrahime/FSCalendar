@@ -15,7 +15,7 @@
 
 @implementation FSCalendar (Deprecated)
 
- identifier, lineHeightMultiplier;
+// identifier, lineHeightMultiplier;
 
 - (void)setShowsPlaceholders:(BOOL)showsPlaceholders
 {

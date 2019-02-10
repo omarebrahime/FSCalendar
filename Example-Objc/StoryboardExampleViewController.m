@@ -81,7 +81,7 @@
     if ([[UIDevice currentDevice].model hasPrefix:@"iPad"]) {
         self.calendarHeightConstraint.constant = 400;
     }
-    self.calendar.identifier = NSCalendarIdentifierPersian;
+    self.calendar.calendarIdentifier = NSCalendarIdentifierPersian;
     self.calendar.locale = [NSLocale localeWithLocaleIdentifier:@"fa-IR"];
     self.calendar.firstWeekday = 7;
     
