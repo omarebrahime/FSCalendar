@@ -153,6 +153,49 @@ func initializeFSCalelndar(){
 </div>
 </details>
 
+### Calendar duration
+With implementing `minimumDateForCalendar` and `maximumDateForCalendar` can show calendar to a duration date:
+
+```swift
+func minimumDate(for calendar: FSCalendar) -> Date {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    
+    return self.formatter.date(from: "1992-02-11")!
+}
+    
+func maximumDate(for calendar: FSCalendar) -> Date {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    
+    return self.formatter.date(from: "2030-02-11")
+}
+```
+
+<details> <summary>Objective-C</summary>
+<div markdown="1">
+
+```objectivec
+- (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd";
+	
+    return [dateFormatter dateFromString:@"1992-02-11"];
+}
+
+- (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    
+    return [dateFormatter dateFromString:@"2030-02-11"];
+}
+```
+
+</div>
+</details>
+
 ## Show event
 
 <img width="25%" height="25%" src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/Show-Event-en.png">
