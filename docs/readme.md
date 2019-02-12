@@ -8,9 +8,9 @@ Please follow read the documentation and see the examples of each feature. Don't
 ## Table of contents
 
 1. [Screenshots](#screenshots)
-2. [Installation](#Installation)
-3. [Usage](#Usage)
-4. [Show event](#Show-event)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Show event](#show-event)
 5. Range selection
 6. Scope
 7. Add achivements
