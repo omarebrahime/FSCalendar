@@ -154,19 +154,33 @@ func initializeFSCalelndar(){
 </details>
 
 ## Show event
-To show dates have some event implement this method to set events of a date:
 
+<img width="25%" height="25%" src="https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/Show-Event-en.png">
+
+To show dates have some event implement `numberOfEventsFor` method to set events of a date:
 ```swift
 func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-	return 2
+    return 2
 }
 ```
+To change event circles color implement `eventDefaultColorsFor` method:
+
+```swift
+func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventDefaultColorsFor date: Date) -> [UIColor]? {
+    return [UIColor.magenta, appearance.eventDefaultColor, UIColor.black]
+}
+```
+
 <details> <summary>Objective-C</summary>
 <div markdown="1">
 
 ```objectivec
 - (NSInteger)calendar:(FSCalendar *)calendar numberOfEventsForDate:(NSDate *)date {
-	return  2;
+    return  2;
+}
+
+- (NSArray *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance eventDefaultColorsForDate:(NSDate *)date {
+    return @[[UIColor magentaColor],appearance.eventDefaultColor,[UIColor blackColor]];
 }
 ```
 </div>
