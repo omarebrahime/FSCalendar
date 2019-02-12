@@ -183,5 +183,7 @@ func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventDef
     return @[[UIColor magentaColor],appearance.eventDefaultColor,[UIColor blackColor]];
 }
 ```
+
 </div>
 </detail>
+
