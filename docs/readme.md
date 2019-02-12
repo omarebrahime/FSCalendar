@@ -185,5 +185,5 @@ func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventDef
 ```
 
 </div>
-</detail>
+</details>
 
