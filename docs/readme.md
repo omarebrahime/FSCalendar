@@ -161,14 +161,14 @@ func minimumDate(for calendar: FSCalendar) -> Date {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd"
     
-    return self.formatter.date(from: "1992-02-11")!
+    return formatter.date(from: "1992-02-11")!
 }
     
 func maximumDate(for calendar: FSCalendar) -> Date {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd"
     
-    return self.formatter.date(from: "2030-02-11")
+    return formatter.date(from: "2030-02-11")
 }
 ```
 
