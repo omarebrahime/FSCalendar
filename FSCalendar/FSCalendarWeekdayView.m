@@ -99,7 +99,7 @@
     NSMutableArray *weekdaySymbols = [NSMutableArray.alloc initWithArray:weekdaySyms];
     BOOL useDefaultWeekdayCase = (self.calendar.appearance.caseOptions & (15<<4) ) == FSCalendarCaseOptionsWeekdayUsesDefaultCase;
     
-    NSInteger firstWeek = self.calendar.firstWeekday;
+//    NSInteger firstWeek = self.calendar.firstWeekday;
     BOOL isRtl = [_calendar.calendarIdentifier isRTLCalendar] && [_calendar.locale isRtlLocale];
     if (isRtl && [_calendar.locale.localeIdentifier isEqualToString:@"fa-IR"]) {
         NSString *last = weekdaySymbols.lastObject;
