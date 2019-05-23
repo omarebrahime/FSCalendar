@@ -1,5 +1,10 @@
 # Change Log
 
+## [2.9.3](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.3)
+### Changes :
+- Fix bug not showing today in current page.
+- Fix bug direction with call `reloadData`
+
 ## [2.9.2](https://github.com/Husseinhj/FSCalendar/releases/tag/2.9.2)
 ### Changes :
 - Fix bug crash library in Persian locale if `minimumDate` method wasn't implemented by developer. now implementing the `minimumDate()` not force anymore.
