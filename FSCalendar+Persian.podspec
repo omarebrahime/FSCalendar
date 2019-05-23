@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name             = "FSCalendar+Persian"
   s.version          = "2.9.3"
-  s.summary          = "RTL (Persian and Arabic) version of FSCalendar. A superiorly awesome iOS7+ calendar control, compatible with Objective-C and Swift. https://husseinhj.github.io/FSCalendar/"
+  s.summary          = "RTL (Persian and Arabic) version of FSCalendar. https://husseinhj.github.io/FSCalendar/"
   
   s.homepage         = "https://github.com/Husseinhj/FSCalendar"
   s.screenshots      = "https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/English/DIY-Example-en.png", "https://raw.githubusercontent.com/Husseinhj/FSCalendar/master/docs/Screenshots/Persian/DIY-Example-fa.png", "https://github.com/Husseinhj/FSCalendar/raw/master/docs/Screenshots/Arabic/DIY-Example-ar.png"
