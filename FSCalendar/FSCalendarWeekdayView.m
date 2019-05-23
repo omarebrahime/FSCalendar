@@ -95,22 +95,33 @@
 - (void)configureAppearance
 {
     BOOL useVeryShortWeekdaySymbols = (self.calendar.appearance.caseOptions & (15<<4) ) == FSCalendarCaseOptionsWeekdayUsesSingleUpperCase;
-    NSArray *weekdaySymbols = useVeryShortWeekdaySymbols ? self.calendar.gregorian.veryShortStandaloneWeekdaySymbols : self.calendar.gregorian.shortStandaloneWeekdaySymbols;
+    NSArray *weekdaySyms = useVeryShortWeekdaySymbols ? self.calendar.gregorian.veryShortStandaloneWeekdaySymbols : self.calendar.gregorian.shortStandaloneWeekdaySymbols;
+    NSMutableArray *weekdaySymbols = [NSMutableArray.alloc initWithArray:weekdaySyms];
     BOOL useDefaultWeekdayCase = (self.calendar.appearance.caseOptions & (15<<4) ) == FSCalendarCaseOptionsWeekdayUsesDefaultCase;
     
     NSInteger firstWeek = self.calendar.firstWeekday;
     BOOL isRtl = [_calendar.calendarIdentifier isRTLCalendar] && [_calendar.locale isRtlLocale];
-    if (isRtl && [_calendar.locale isEqual:@"fa-IR"]) {
-        firstWeek = 7;
+    if (isRtl && [_calendar.locale.localeIdentifier isEqualToString:@"fa-IR"]) {
+        NSString *last = weekdaySymbols.lastObject;
+        [weekdaySymbols removeObject:last];
+        [weekdaySymbols insertObject:last atIndex:0];
+        
+//        weekdaySymbols = [[[weekdaySymbols reverseObjectEnumerator] allObjects] mutableCopy];
     }
     for (NSInteger i = 0; i < self.weekdayPointers.count; i++) {
-        NSInteger index = (i + firstWeek-1) % 7;
+        NSInteger index = i;//(i + firstWeek-1) % 7;
         UILabel *label = [self.weekdayPointers pointerAtIndex:i];
         label.font = self.calendar.appearance.weekdayFont;
         label.textColor = self.calendar.appearance.weekdayTextColor;
         label.text = useDefaultWeekdayCase ? weekdaySymbols[index] : [weekdaySymbols[index] uppercaseString];
         
         if (isRtl) {
+            if (self.calendar.pagingEnabled) {
+                label.accessibilityLanguage = @"Persian";
+                [label setTransform:CGAffineTransformMakeScale(-1,1)];
+            }
+        } else if ([label.accessibilityLanguage isEqualToString:@"Persian"]) {
+            label.accessibilityLanguage = @"English";
             [label setTransform:CGAffineTransformMakeScale(-1,1)];
         }
     }

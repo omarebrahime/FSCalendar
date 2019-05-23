@@ -209,15 +209,17 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         _visibleSectionHeaders = [NSMapTable weakToWeakObjectsMapTable];
     }
     
-    _pagingEnabled = YES;
-    _scrollEnabled = YES;
-    _needsAdjustingViewFrame = YES;
+    if (!_dataSourceProxy) {
+        _pagingEnabled = YES;
+        _scrollEnabled = YES;
+        _needsAdjustingViewFrame = YES;
     _needsRequestingBoundingDates = YES;
     _orientation = self.currentCalendarOrientation;
     _placeholderType = FSCalendarPlaceholderTypeFillSixRows;
-    
-    _dataSourceProxy = [FSCalendarDelegationFactory dataSourceProxy];
-    _delegateProxy = [FSCalendarDelegationFactory delegateProxy];
+        
+        _dataSourceProxy = [FSCalendarDelegationFactory dataSourceProxy];
+        _delegateProxy = [FSCalendarDelegationFactory delegateProxy];
+    }
     
     if (!self.contentView) {
         UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -502,7 +504,14 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         case FSCalendarPlaceholderTypeNone: {
             if (self.transitionCoordinator.representingScope == FSCalendarScopeMonth && monthPosition != FSCalendarMonthPositionCurrent) {
                 UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier forIndexPath:indexPath];
-                [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                if([self isPersianCalender]){
+                    cell.accessibilityLanguage = @"Persian";
+                    [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                } else if ([cell.accessibilityLanguage isEqualToString:@"Persian"]) {
+                    cell.accessibilityLanguage = @"English";
+                    [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                }
+                
                 return cell;
             }
             break;
@@ -511,7 +520,13 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             if (self.transitionCoordinator.representingScope == FSCalendarScopeMonth) {
                 if (indexPath.item >= 7 * [self.calculator numberOfRowsInSection:indexPath.section]) {
                     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier forIndexPath:indexPath];
-                    [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                    if ([self isPersianCalender]) {
+                        cell.accessibilityLanguage = @"Persian";
+                        [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                    } else if ([cell.accessibilityLanguage isEqualToString:@"Persian"]) {
+                        cell.accessibilityLanguage = @"English";
+                        [cell setTransform:CGAffineTransformMakeScale(-1,1)];
+                    }
                     return cell;
                 }
             }
@@ -529,8 +544,12 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     }
     [self reloadDataForCell:cell atIndexPath:indexPath];
     if ([self isPersianCalender]) {
-        [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
+        cell.accessibilityLanguage = @"Persian";
+        [cell setTransform:CGAffineTransformMakeScale(-1,1)];
         cell.titleLabel.text = [self convertEnNumberToFarsi:cell.titleLabel.text];
+    } else if ([cell.accessibilityLanguage isEqualToString:@"Persian"]) {
+        cell.accessibilityLanguage = @"English";
+        [cell setTransform:CGAffineTransformMakeScale(-1,1)];
     }
     return cell;
 }
@@ -540,10 +559,15 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     if (self.floatingMode) {
         if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
             FSCalendarStickyHeader *stickyHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
-            if ([self isPersianCalender]) {
-                [stickyHeader setTransform:CGAffineTransformMakeScale(-1, 1)];
-            }
             stickyHeader.calendar = self;
+            if ([self isPersianCalender]) {
+                stickyHeader.accessibilityLanguage = @"Persian";
+                [stickyHeader setTransform:CGAffineTransformMakeScale(-1,1)];
+            } else if ([stickyHeader.accessibilityLanguage isEqualToString:@"Persian"]) {
+                stickyHeader.accessibilityLanguage = @"English";
+                [stickyHeader setTransform:CGAffineTransformMakeScale(-1,1)];
+            }
+            
             stickyHeader.month = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:indexPath.section toDate:[self.gregorian fs_firstDayOfMonth:_minimumDate] options:0];
             self.visibleSectionHeaders[indexPath] = stickyHeader;
             [stickyHeader setNeedsLayout];
