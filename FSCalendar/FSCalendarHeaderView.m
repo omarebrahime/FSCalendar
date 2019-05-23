@@ -109,7 +109,12 @@
 {
     FSCalendarHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.header = self;
+    
     if ([self.calendar.calendarIdentifier isRTLCalendar]) {
+        cell.accessibilityLanguage = @"Persian";
+        [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
+    } else if ([cell.accessibilityLanguage isEqualToString:@"Persian"]) {
+        cell.accessibilityLanguage = @"English";
         [cell setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
     [self configureCell:cell atIndexPath:indexPath];
