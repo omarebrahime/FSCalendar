@@ -768,13 +768,20 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 #pragma mark - Properties
 
 - (void)setCalendarIdentifier:(NSString *)identifier{
-    self.gregorian = [NSCalendar calendarWithIdentifier:identifier];
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:identifier];
     if ([identifier isRTLCalendar]) {
         //TODO: Totall view did change the direction.
-        [self setTransform:CGAffineTransformMakeScale(-1, 1)];
+        self.accessibilityLanguage = @"Persian";
+        [self setTransform:CGAffineTransformMakeScale(-1,1)];
+    } else if ([self.accessibilityLanguage isEqualToString:@"Persian"]) {
+        self.accessibilityLanguage = @"English";
+        [self setTransform:CGAffineTransformMakeScale(-1,1)];
     }
-    _today = [self.gregorian dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
-    _currentPage = [self.gregorian fs_firstDayOfMonth:_today];
+    
+    _today = [calendar dateBySettingHour:0 minute:0 second:0 ofDate:[NSDate date] options:0];
+    
+    self.gregorian = calendar;
+    _currentPage = [calendar fs_firstDayOfMonth:_today];
     
     [self invalidateDateTools];
     [self configureAppearance];
