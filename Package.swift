@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "FSCalendar",
             dependencies: [],
-            path: "FSCalendarr/", // Make sure this matches the folder containing FSCalendar sources
+            path: "FSCalendarr", // Make sure this matches the folder containing FSCalendar sources
             exclude: ["Info.plist"]
         )
     ]
