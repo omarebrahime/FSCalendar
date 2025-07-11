@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "FSCalendar",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v9)
     ],
     products: [
         .library(
